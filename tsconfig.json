@@ -1,0 +1,36 @@
+/* Visit https://aka.ms/tsconfig.json to read more about this file */
+
+{
+  "compilerOptions": {
+    /* Base options */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": false,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Typescript transpiling */
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext",
+    "sourceMap": true,
+    "removeComments": true,
+
+    "baseUrl": "./",
+    "rootDir": "src",
+    "outDir": "build",
+
+    "lib": ["ES2022"],
+    "paths": {
+      "#src/*": ["src/*"],
+      "#root/*": ["./*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
