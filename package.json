@@ -1,17 +1,32 @@
 {
   "name": "@bromanla/logger",
-  "type": "module",
   "version": "0.0.1",
+  "description": "A lightweight logger library for Node.js",
+  "author": "bromanla <bromanla.json@gmail.com>",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "logger",
+    "nodejs"
+  ],
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bromanla/logger.git"
+  },
   "license": "MIT",
   "scripts": {
     "prebuild": "rm -rf build",
     "build": "tsc --build",
-    "build:lib": "tsup src/index.ts --format esm --dts",
+    "prepare": "tsup src/index.ts --format esm --dts",
     "start": "node --env-file=.env build/index.js",
     "start:dev": "tsc-watch --onSuccess \"node --env-file=.env --inspect build/index.js\""
   },
   "devDependencies": {
-    "@types/node": "^22.5.4",
+    "@types/node": "^22.5.5",
     "prettier": "^3.3.3",
     "tsc-watch": "^6.2.0",
     "tsup": "^8.2.4",
